@@ -9,9 +9,9 @@ services:
     user: "netbox:root"
     healthcheck:
       test: curl -f http://10.100.11.190:8888/login/ || exit 1
-      start_period: 90s
-      timeout: 3s
-      interval: 15s
+      start_period: 300s
+      timeout: 30s
+      interval: 120s
     volumes:
       - ./configuration:/etc/netbox/config:z,ro
       - netbox-media-files:/opt/netbox/netbox/media:rw
