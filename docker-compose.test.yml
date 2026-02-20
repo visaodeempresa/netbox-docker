@@ -1,5 +1,7 @@
 services:
   netbox: &netbox
+    ports:
+      - "8888:8080"
     image: ${IMAGE-docker.io/netboxcommunity/netbox:latest}
     depends_on:
       postgres:
